@@ -1,6 +1,6 @@
 {
   "name": "npmdl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Conveniently download files from npm packages",
   "main": "index.js",
   "license": "MIT",
