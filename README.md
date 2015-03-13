@@ -30,7 +30,7 @@ save bandwidth and go a little easier on the npm registry :)
 ``` javascript
 var npmdl = require('npmdl')
 
-npmdl('browserify', '9.0.0', 'bin/advanced.txt', function(err, content) {
+npmdl(__dirname)('browserify', '9.0.0', 'bin/advanced.txt', function(err, content) {
   if (err) throw err
 
   // logs browserify@9.0.0's advanced help to the console
