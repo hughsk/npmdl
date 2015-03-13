@@ -1,0 +1,43 @@
+{
+  "name": "npmdl",
+  "version": "1.0.0",
+  "description": "Conveniently download files from npm packages",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test | tap-spec"
+  },
+  "author": {
+    "name": "Hugh Kennedy",
+    "email": "hughskennedy@gmail.com",
+    "url": "http://hughsk.io/"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "request": "^2.53.0",
+    "tar-fs": "^1.5.0",
+    "userhome": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.3.2",
+    "tap-spec": "^2.2.1",
+    "tape": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/npmdl.git"
+  },
+  "keywords": [
+    "npm",
+    "download",
+    "dl",
+    "files",
+    "remote",
+    "unpack",
+    "untar"
+  ],
+  "homepage": "https://github.com/hughsk/npmdl",
+  "bugs": {
+    "url": "https://github.com/hughsk/npmdl/issues"
+  }
+}
