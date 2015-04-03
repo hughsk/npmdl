@@ -30,6 +30,27 @@ test('npmdl', function(t) {
   })
 })
 
+test('npmdl: handles missing name safely', function(t) {
+  npmdl(testDir)(null, null, null, function(err, content) {
+    t.ok(err, 'error reported')
+    t.end()
+  })
+})
+
+test('npmdl: handles missing version safely', function(t) {
+  npmdl(testDir)('glsl-raytrace', null, null, function(err, content) {
+    t.ok(err, 'error reported')
+    t.end()
+  })
+})
+
+test('npmdl: handles missing file safely', function(t) {
+  npmdl(testDir)('glsl-raytrace', '1.0.0', null, function(err, content) {
+    t.ok(err, 'error reported')
+    t.end()
+  })
+})
+
 test('teardown', function(t) {
   rimraf.sync(testDir)
   t.end()

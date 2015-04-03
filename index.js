@@ -19,6 +19,11 @@ function NpmDownloader(root) {
     vers = sanitize(vers).replace(path.sep, '')
     file = sanitize(file)
 
+    // For safety :D
+    if (!name) return done(new Error('Missing package name'))
+    if (!vers) return done(new Error('Missing package version ('+name+')'))
+    if (!file) return done(new Error('Missing package file ('+name+'@'+vers+')'))
+
     var pkgDir  = path.join(root, name, vers)
     var pkgFile = path.join(root, name, vers, 'package', file)
 
@@ -51,6 +56,7 @@ function NpmDownloader(root) {
   }
 
   function sanitize(chunk) {
+    chunk = chunk || ''
     chunk = chunk.replace(/%2e/ig, '.')
     chunk = chunk.replace(/%2f|%5c/ig, '/')
     chunk = chunk.replace(/[\/\\]/g, '/')
